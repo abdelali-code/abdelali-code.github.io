@@ -1,0 +1,191 @@
+/*
+    color used : 
+    1 : rgb(12, 6, 6);
+    2 : #dfd8d8
+    3 : cornflowerblue
+    4 : #000
+    5 : #fff
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.icon {
+    fill: currentColor;
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    /* overflow: visible; */
+  }
+
+body {
+    background: #dfd8d8;
+    line-height: 1.5;
+    font-size: 1.2em;
+    color: #000;
+}
+/* main container size */
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 0px 20px;
+}
+
+/* end of main contaier size */
+
+/* grid used */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 40px;
+    border-bottom: 1px solid #dfd8d8;
+    padding-top: 32px;
+}
+/* end of grid */
+
+/* header */
+img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+h1{
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: cornflowerblue;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+ ul li.link-item a {
+     color: rgb(12, 6, 6);
+     text-decoration: none;
+ }
+
+ .link-item a:hover {
+     text-decoration: underline;
+ }
+ .aboutme {
+     padding-bottom: 32px;
+ }
+
+/* header end */
+
+/* main content */
+.title {
+    display: flex;
+    flex-direction: row;
+}
+
+.job{
+    flex: 3;
+    padding-bottom: 20px;
+}
+
+.description {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #dfd8d8;
+    padding-bottom: 32px;
+}
+.container p:nth-child(6){
+    border-bottom: none;
+}
+
+.grid.education p:nth-child(2){
+    border-bottom: none;
+}
+
+/* skills section */
+.skill {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 32px 20px;
+}
+
+.skill ul{
+    list-style: square;
+}
+.foot {
+    padding-bottom: 32px;
+}
+
+.favorite {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interests {
+    padding-bottom: 32px;
+}
+
+.interest{
+    width: 10%;
+    font-size: 200%;
+}
+
+.job h3 {
+    color: #000;
+}
+
+
+/* end of main content */
+
+
+
+/* for screen = between 674 and 900px */
+@media (min-width: 674px) and (max-width: 900px) {
+    h1 {
+        color: red;
+    }
+    .links {
+        width: 100%;
+        font-size: 0.7em;
+    }
+} 
+/* end of screen = between 674 and 880px  */
+
+
+/* Screen = less than 674px */
+ @media (max-width: 673px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .links{
+        display: block;
+    }
+    .links li {
+        padding-bottom: 15px;
+    }
+    .title{
+        display: block;
+        padding-bottom: 24px;
+    }
+    .job {
+        padding-bottom: 8px;
+    }
+
+    img {
+        width: 70%;
+    }
+    .photo, .name, .profe {
+        text-align: center;
+    }
+
+} 
+
+/* end of Screen = less than 674px */
